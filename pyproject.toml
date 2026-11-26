@@ -23,7 +23,12 @@ dependencies = [
     "codecarbon>=2.3.1",
     "numpy>=1.23.0",
     "pandas>=1.5.0",
-    "scikit-learn>=1.2.0"
+    "scikit-learn>=1.2.0",
+    "streamlit>=1.66",
+    "plotly>=7.1",
+    "matplotlib>=3.6.0",
+    "scipy>=1.10.0",
+    "tabulate>=0.9.0"
 ]
 
 [project.optional-dependencies]
@@ -41,9 +46,6 @@ experiments = [
     "tabulate>=0.9.0",
     "threadpoolctl>=3.1.0"
 ]
-# Painel interativo (app/), que exige Python 3.11 ou superior. Versões mínimas iguais
-# às testadas: o painel usa recursos recentes do Streamlit (st.navigation,
-# segmented_control, badge, width="stretch").
 app = [
     "streamlit>=1.66",
     "plotly>=7.1",
@@ -61,7 +63,6 @@ python_functions = ["test_*"]
 addopts = "-v --strict-markers"
 
 [tool.black]
-# Mesmo alvo do ruff; sem isso o Black infere até 3.14 a partir de requires-python.
 target-version = ["py310"]
 
 [tool.ruff]
